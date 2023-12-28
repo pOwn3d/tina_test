@@ -15,14 +15,14 @@ export default isLocal
   : createDatabase({
       gitProvider: new GitHubProvider({
           branch,
-          owner: process.env.GITHUB_OWNER,
-          repo: process.env.GITHUB_REPO,
-          token: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
+          owner: process.env.GITHUB_OWNER || '',
+          repo: process.env.GITHUB_REPO || '',
+          token: process.env.GITHUB_PERSONAL_ACCESS_TOKEN || '',
         }),
       databaseAdapter: new MongodbLevel({
           collectionName: 'tinacms',
           dbName: 'tinacms',
-          mongoUri: process.env.MONGODB_URI,
+          mongoUri: process.env.MONGODB_URI || '',
         }),
       namespace: branch,
     })

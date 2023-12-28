@@ -1,6 +1,6 @@
 import * as React from "react"
-import { HeaderQuery } from "../../tina/__generated__/types";
-import { tinaField, useTina } from "tinacms/dist/react";
+import { HeaderQuery } from "../tina/__generated__/types";
+import { tinaField } from "tinacms/dist/react";
 
 export function SiteHeader(props: HeaderQuery['header']) {
   return (

@@ -7,7 +7,8 @@
     "dev:prod": "TINA_PUBLIC_IS_LOCAL=false tinacms dev -c \"next dev\"",
     "build": "tinacms build && tinacms build --partial-reindex && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "npm run build && next export"
   },
   "devDependencies": {
     "@types/node": "^20.10.5",
@@ -20,6 +21,7 @@
     "tailwindcss": "^3.3.5"
   },
   "dependencies": {
+    "@pcode-at/tinacms-seo": "^2.0.0",
     "@tinacms/cli": "^1.5.34",
     "@tinacms/datalayer": "^1.2.32",
     "axios": "^1.6.2",
@@ -27,6 +29,7 @@
     "mongodb-level": "^0.0.4",
     "next": "^14.0.3",
     "next-auth": "^4.24.5",
+    "next-seo": "^6.4.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tinacms": "^1.5.24",
