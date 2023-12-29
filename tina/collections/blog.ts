@@ -1,5 +1,5 @@
 import { Collection } from "tinacms";
-import { defaultSeoPageProps, seoPageProps } from "@pcode-at/tinacms-seo";
+import { seoPageProps } from "@pcode-at/tinacms-seo";
 
 export const BlogCollection: Collection = {
   name: "blog",
@@ -8,8 +8,15 @@ export const BlogCollection: Collection = {
   format: "md",
   ui: {
     router: ({ document }) => {
-      return `/blog/${document._sys.filename}`
+      return `/blog/${document._sys.filename}`;
     },
+    filename: ({
+      slugify: (values) => {
+        return `${values?.title
+          ?.toLowerCase()
+          .replace(/ /g, "-")}`;
+      }
+    })
   },
   fields: [
     seoPageProps,
@@ -18,13 +25,13 @@ export const BlogCollection: Collection = {
       name: "title",
       label: "Title",
       isTitle: true,
-      required: true,
+      required: true
     },
     {
-      type: "string",
+      type: "rich-text",
       name: "body",
       label: "Body",
-      isBody: true,
-    },
-  ],
+      isBody: true
+    }
+  ]
 };

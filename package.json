@@ -21,6 +21,8 @@
     "tailwindcss": "^3.3.5"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.1.1",
     "@pcode-at/tinacms-seo": "^2.0.0",
     "@tinacms/cli": "^1.5.34",
     "@tinacms/datalayer": "^1.2.32",
@@ -36,6 +38,7 @@
     "tinacms-authjs": "^1.0.5",
     "tinacms-gitprovider-github": "^1.0.3",
     "typescript": "5.0.4",
-    "upstash-redis-level": "^1.1.1"
+    "upstash-redis-level": "^1.1.1",
+    "next-themes": "^0.2.1"
   }
 }

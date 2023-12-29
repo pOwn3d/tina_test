@@ -13,7 +13,7 @@ export const ContentCollection: Collection =
     },
     fields: [
       { type: "string", name: "title", label: "title" },
-      { type: "string", name: "content", label: "content" }
+      { type: "rich-text", name: "content", label: "content" }
     ],
   };
 
